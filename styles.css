@@ -3,6 +3,52 @@ body {
   background-color: #011F3F;
 }
 
+
+/* ------------- index.html --------------- */
+
+#game-title, #rules-title, #rules, button {
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+  
+}
+
+#game-title {
+  font-size: 4rem;
+  margin-top: 100px;
+}
+
+#rules-title {
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-top: 100px;
+}
+
+span {
+  display: block;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+button {
+  margin-top: 30px;
+  background-color: green;
+  color: #FEF2BF;
+  height: 60px;
+  width: 200px;
+  font-size: 15px;
+  border-radius: 10px;
+
+}
+
+
+
+/* ------------- game.html --------------- */
+
+
+
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;

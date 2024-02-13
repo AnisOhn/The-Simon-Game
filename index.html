@@ -1,43 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Simon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
-
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div class="row">
+    <h1 id="game-title">The Simon Game</h1>
+    <h3 id="rules-title">Rules</h3>
+    <p id="rules">
+      <span>1- Simon is a memory-based electronic game that tests your ability to recall sequences of colors and sounds.</span>
+      <span>2- The game consists of four colored buttons – red, blue, green, and yellow – each associated with a unique tone.</span>
+      <span>3- Simon generates a random sequence that players must replicate by pressing the corresponding buttons in the correct order.</span>
+      <span>4- The difficulty increases with each successful round, challenging players to remember and repeat longer and more complex patterns.</span>
+    </p>
+    
 
-      <div type="button" id="green" class="btn green">
+    <a href="game.html"><button>Start Game</button></a>
 
-      </div>
+    <script>
+      var button = document.getElementsByTagName("a")[0];
 
-      <div type="button" id="red" class="btn red">
-
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+      button.addEventListener("click", function(e) {
+        e.preventDefault();
+        var sfx = new Audio("sounds/game-start.mp3");
+        sfx.play();
+        setTimeout(function() {
+          location.href = "game.html";   
+        }, 500);
+        
+      })
+    </script>
 </body>
-
 </html>
